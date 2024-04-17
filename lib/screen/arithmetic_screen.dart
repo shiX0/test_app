@@ -24,20 +24,23 @@ class _ArithmeticScreenState extends State<ArithmeticScreen> {
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
-            const TextField(
+            TextField(
               onChanged: (value){
-                
+                first=int.tryParse(value);
               },
               keyboardType: TextInputType.number,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: "Enter a number",
                 border: OutlineInputBorder(),
               ),
             ),
             const SizedBox(height: 10,),
-            const TextField(
+            TextField(
+              onChanged: (value){
+                second=int.tryParse(value);
+              },
               keyboardType: TextInputType.number,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: "Enter a number",
                 border: OutlineInputBorder(),
               ),
@@ -47,7 +50,11 @@ class _ArithmeticScreenState extends State<ArithmeticScreen> {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: (){},
+                onPressed: (){
+                  setState(() {
+                    result=first!+second!;
+                  });
+                },
                 child: const Text(
                   'Add',
                   style: TextStyle(
@@ -56,8 +63,24 @@ class _ArithmeticScreenState extends State<ArithmeticScreen> {
                 ),
               ),
             ),
+            const SizedBox(height: 10,),SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                onPressed: (){
+                  setState(() {
+                    result=first!-second!;
+                  });
+                },
+                child: const Text(
+                  'subtract',
+                  style: TextStyle(
+                    fontSize: 25,
+                  ),
+                ),
+              ),
+            ),
             const SizedBox(height: 10,),
-            const Text("Sum is : 0"),
+            Text("Output is : $result"),
           ],
         ),
       )
