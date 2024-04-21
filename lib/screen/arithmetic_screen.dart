@@ -73,7 +73,7 @@ class _ArithmeticScreenState extends State<ArithmeticScreen> {
                   onPressed: () {
                     if (myKey.currentState!.validate()) {
                       setState(() {
-                        calcu=ArithmeticModel(first: first, second: second);
+                        calcu = ArithmeticModel(first: first, second: second);
                         result = calcu.sum();
                       });
                     }
@@ -93,7 +93,7 @@ class _ArithmeticScreenState extends State<ArithmeticScreen> {
                   onPressed: () {
                     if (first != null && second != null) {
                       setState(() {
-                        calcu=ArithmeticModel(first: first, second: second);
+                        calcu = ArithmeticModel(first: first, second: second);
                         result = calcu.sub();
                       });
                     }
