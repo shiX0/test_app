@@ -11,21 +11,14 @@ class ColumnScreen extends StatelessWidget {
         ),
         body: Container(
           color: Colors.yellow,
-          child: const Column(
-            mainAxisAlignment: MainAxisAlignment.start,
+          width: double.infinity,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(
-                Icons.star,
-                size: 50,
-              ),
-              Icon(
-                Icons.star,
-                size: 50,
-              ),
-              Icon(
-                Icons.star,
-                size: 50,
-              )
+              ElevatedButton(onPressed: () {}, child: const Text('button1')),
+              ElevatedButton(onPressed: () {}, child: const Text('button2')),
+              ElevatedButton(onPressed: () {}, child: const Text('button3')),
             ],
           ),
         ));

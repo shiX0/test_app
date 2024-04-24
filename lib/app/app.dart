@@ -4,6 +4,7 @@ import 'package:test_app/screen/column_screen.dart';
 import 'package:test_app/screen/dashboard_screen.dart';
 import 'package:test_app/screen/hello_world_screen.dart';
 import 'package:test_app/screen/layout_screen.dart';
+import 'package:test_app/screen/radio_screen.dart';
 import 'package:test_app/screen/simple_intrest_screen.dart';
 
 class App extends StatelessWidget {
@@ -12,7 +13,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: ColumnScreen(),
+      home: RadioScreen(),
     );
   }
 }
