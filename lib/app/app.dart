@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test_app/screen/arithmetic_screen.dart';
+import 'package:test_app/screen/column_screen.dart';
 import 'package:test_app/screen/dashboard_screen.dart';
 import 'package:test_app/screen/hello_world_screen.dart';
 import 'package:test_app/screen/layout_screen.dart';
@@ -11,7 +12,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: LayoutScreen(),
+      home: ColumnScreen(),
     );
   }
 }
