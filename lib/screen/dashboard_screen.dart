@@ -14,58 +14,71 @@ class DashboardScreen extends StatelessWidget {
         centerTitle: true,
       ),
       body: Center(
-        child: Column(
-          children: [
-            const SizedBox(height: 10,),SizedBox(
-              width: double.infinity,
-              child: ElevatedButton(
-                onPressed: (){
-                  Navigator.push(
+        child: Column(children: [
+          const SizedBox(
+            height: 10,
+          ),
+          SizedBox(
+            width: double.infinity,
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const ArithmeticScreen()),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor:
+                    Colors.green, // Set the background color to green
+              ),
+              child: const Text(
+                'Arithemetic Screen',
+                style: TextStyle(fontSize: 25, color: Colors.white),
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          SizedBox(
+            width: double.infinity,
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const ArithmeticScreen()),);
-                },
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.green, // Set the background color to green
-                ),
-                child: const Text(
-                  'Arithemetic Screen',
-                  style: TextStyle(
-                    fontSize: 25,
-                    color: Colors.white
-                  ),
+                    MaterialPageRoute(
+                        builder: (context) => const SimpleIntrestScreen()));
+              },
+              child: const Text(
+                'Simple Intrest',
+                style: TextStyle(
+                  fontSize: 25,
                 ),
               ),
             ),
-            const SizedBox(height: 10,),SizedBox(
-              width: double.infinity,
-              child: ElevatedButton(
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const SimpleIntrestScreen()));
-                },
-                child: const Text(
-                  'Simple Intrest',
-                  style: TextStyle(
-                    fontSize: 25,
-                  ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          SizedBox(
+            width: double.infinity,
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const CircleScreen()));
+              },
+              child: const Text(
+                'Area of Circle',
+                style: TextStyle(
+                  fontSize: 25,
                 ),
               ),
             ),
-            const SizedBox(height: 10,),SizedBox(
-              width: double.infinity,
-              child: ElevatedButton(
-                onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const CircleScreen()));
-                },
-                child: const Text(
-                  'Area of Circle',
-                  style: TextStyle(
-                    fontSize: 25,
-                  ),
-                ),
-              ),
-            ),
-          ]
-        ),
+          ),
+        ]),
       ),
     );
   }
