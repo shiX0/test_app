@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:test_app/model/arithmetic_model.dart';
 import 'package:test_app/model/circle_model.dart';
 
 class CircleScreen extends StatefulWidget {

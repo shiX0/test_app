@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:test_app/model/simple_intrest_model.dart';
 
 class SimpleIntrestScreen extends StatefulWidget {
